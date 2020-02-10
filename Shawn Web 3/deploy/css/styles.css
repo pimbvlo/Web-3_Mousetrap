@@ -28,7 +28,8 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -328,6 +329,21 @@ h1, h2, h3, h4, h5, p {
   padding: 0;
   margin: 0; }
 
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 700; }
+
+h2 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400; }
+
 /* =============
     Buttons
 ============= */
@@ -358,3 +374,35 @@ textarea {
 /* =============
     Main Page
 ============= */
+#section-1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); }
+  #section-1 article {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". title ." ". paragraphs .";
+    background-color: #0B33A9;
+    padding: 16px 0;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05), 0 1px 10px 0 rgba(0, 0, 0, 0.03), 0 4px 5px 0 rgba(0, 0, 0, 0.04);
+    color: #FCFCFC; }
+    #section-1 article h1 {
+      grid-area: title;
+      margin-bottom: 8px; }
+    #section-1 article div {
+      grid-area: paragraphs; }
+      #section-1 article div h2 {
+        opacity: 0.9; }
+      #section-1 article div p {
+        padding-top: 4px; }
+  #section-1 aside {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #section-1 aside div {
+      border-radius: 4%;
+      box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.05), 0px 9px 46px 8px rgba(0, 0, 0, 0.03), 0px 24px 38px 3px rgba(0, 0, 0, 0.04);
+      height: 100px;
+      width: 100px;
+      background-color: #0B33A9; }

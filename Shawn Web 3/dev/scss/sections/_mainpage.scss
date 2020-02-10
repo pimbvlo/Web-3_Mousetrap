@@ -2,16 +2,49 @@
     Main Page
 ============= */
 #section-1 {
-    
-    > div {
-        article {
-            h1 {}
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
 
-            p {}
+    article {
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". title ." ". paragraphs .";
+        background-color: $blue;
+        padding: 16px 0;
+        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .05), 0 1px 10px 0 rgba(0, 0, 0, .03), 0 4px 5px 0 rgba(0, 0, 0, .04);
+        color: $off-white;
+
+        h1 {
+            grid-area: title;
+            margin-bottom: 8px;
         }
 
-        aside {
-            div {}
+        div {
+            grid-area: paragraphs;
+
+            h2 {
+                opacity: 0.9;
+            }
+
+            p{
+                padding-top: 4px;
+            }
+        }
+    }
+
+    aside {
+        height: 70vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            border-radius: 4%;
+            box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, .05), 0px 9px 46px 8px rgba(0, 0, 0, .03), 0px 24px 38px 3px rgba(0, 0, 0, .04);
+            height: 100px;
+            width: 100px;
+            background-color: $blue;
         }
     }
 }
